@@ -20,3 +20,20 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/addproduct','ProductController@create')->name('create.product');
+Route::post('/saveproduct','ProductController@store')->name('save.product');
+Route::view('/products','admin.product.product',[
+	'data' => App\Product::all()
+]);
+
+ //edit product
+    // Route::get('editProduct/{id}', function($id){
+    //   return view('admin.editProduct',[
+    //     'data' => App\products::where('id',$id)->get()
+    //   ]);
+    // });
+
+Route::get('/editProduct/{id}',function($id){
+	return view('admin.product.edit',[
+		'data' =>App\Product::where('id',$id)->get()
+	]);
+});

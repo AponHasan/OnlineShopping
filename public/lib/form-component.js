@@ -70,10 +70,6 @@ var Script = function () {
 
     //color picker
 
-    $('.cp1').colorpicker({
-        format: 'hex'
-    });
-    $('.cp2').colorpicker();
 
 
     //date picker

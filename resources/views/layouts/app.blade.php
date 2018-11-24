@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -23,6 +24,8 @@
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
     <link href="{{asset('css/style-responsive.css')}}" rel="stylesheet">
     
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
 </head>
 <body>
     <div id="app">
@@ -267,13 +270,14 @@
               <span>Dashboard</span>
               </a>
           </li>
+          
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-desktop"></i>
-              <span>UI Elements</span>
+              <span>Product</span>
               </a>
             <ul class="sub">
-              <li><a href="general.html">General</a></li>
+              <li><a href="/addproduct">Add Products</a></li>
               <li><a href="buttons.html">Buttons</a></li>
               <li><a href="panels.html">Panels</a></li>
               <li><a href="font_awesome.html">Font Awesome</a></li>
@@ -392,15 +396,16 @@
   <script src="{{asset('lib/common-scripts.js')}}"></script>
 
   <!--script for this page-->
-  <script src="lib/jquery-ui-1.9.2.custom.min.js"></script>
+  <script src="{{asset('lib/jquery-ui-1.9.2.custom.min.js')}}"></script>
   <!--custom switch-->
-  <script src="lib/bootstrap-switch.js"></script>
+  <script src="{{asset('lib/bootstrap-switch.js')}}"></script>
   <!--custom tagsinput-->
-  <script src="lib/jquery.tagsinput.js"></script>
+  <script src="{{asset('lib/jquery.tagsinput.js')}}"></script>
   <!--custom checkbox & radio-->
-  <script type="text/javascript" src="lib/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-  <script type="text/javascript" src="lib/bootstrap-daterangepicker/date.js"></script>
-  <script type="text/javascript" src="lib/bootstrap-daterangepicker/daterangepicker.js"></script>
-  <script type="text/javascript" src="lib/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
-  <script src="lib/form-component.js"></script>
+  <script type="text/javascript" src="{{asset('lib/bootstrap-datepicker/js/bootstrap-datepicker.js')}}"></script>
+  <script type="text/javascript" src="{{asset('lib/bootstrap-daterangepicker/date.js')}}"></script>
+  <script type="text/javascript" src="{{asset('lib/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
+  <script type="text/javascript" src="{{asset('lib/bootstrap-inputmask/bootstrap-inputmask.min.js')}}"></script>
+  <script src="{{asset('lib/form-component.js')}}"></script>
+
 </html>
