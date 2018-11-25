@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-  <link rel="stylesheet" type="text/css" href="lib/bootstrap-fileupload/bootstrap-fileupload.css" />
 <script type="text/javascript">
 	$(document).ready(function(){
 		// alert("helo");
@@ -41,7 +40,7 @@
 		});
 		var auto_refersh = setInterval(
 			function(){
-				$('#product').load('<?php echo('/products');?>').fadeIn("slow");
+				$('#product').load('<?php echo url('/products');?>').fadeIn("slow");
 			},100);
 	});
 </script>
@@ -101,14 +100,12 @@
                 					<div class="col-sm-6" id="product">
                 						data
 						                
-                					</div>
-                					
-                				</div>
+                					</div>	
+                	</div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-  <script type="text/javascript" src="lib/bootstrap-fileupload/bootstrap-fileupload.js"></script>
 @endsection

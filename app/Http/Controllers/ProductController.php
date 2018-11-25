@@ -26,7 +26,7 @@ class ProductController extends Controller
             'pro_name' => $pro_name,
             'pro_code' => $pro_code,
             'pro_price'=> $pro_price,
-            'pro_img'  => $pro_img,
+            'pro_img'  => "image.png",
             'updated_at'=> \Carbon\Carbon::now()->toDateTimeString(),
         ]);
         }else{

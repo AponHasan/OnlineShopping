@@ -26,14 +26,8 @@ Route::view('/products','admin.product.product',[
 ]);
 
  //edit product
-    // Route::get('editProduct/{id}', function($id){
-    //   return view('admin.editProduct',[
-    //     'data' => App\products::where('id',$id)->get()
-    //   ]);
-    // });
-
-Route::get('/editProduct/{id}',function($id){
-	return view('admin.product.edit',[
-		'data' =>App\Product::where('id',$id)->get()
-	]);
-});
+ Route::get('/editProduct/{id}', function($id){
+      return view('admin.product.edit',[
+        'data' => App\Product::where('id',$id)->get()
+      ]);
+    });

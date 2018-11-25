@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-  <link rel="stylesheet" type="text/css" href="lib/bootstrap-fileupload/bootstrap-fileupload.css" />
+
 <script type="text/javascript">
 	$(document).ready(function(){
 		// alert("helo");
@@ -36,9 +36,7 @@
 
 					$("#msg").html("Product has been Updated");
 					$("#msg").fadeOut(4000);
-
 				}
-				
 			});
 		});
 		var auto_refersh = setInterval(
@@ -94,8 +92,24 @@
                 					</div>
                 					</div>
                 					<div class="col-sm-6" id="">
-                						data
-						                
+                						<div style="" class="form-group last">
+                                          <label class="control-label col-md-3">Image Upload</label>
+                                          <div class="col-md-9">
+                                            <div class="fileupload fileupload-new" data-provides="fileupload">
+                                              <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
+                                                <img src="{{$data[0]->pro_img}}" alt="" />
+                                              </div>
+                                              <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                                              <div>
+                                                <span class="btn btn-theme02 btn-file">
+                                                  <span class="fileupload-new"><i class="fa fa-paperclip"></i> Select image</span>
+                                                <span class="fileupload-exists"><i class="fa fa-undo"></i> Change</span>
+                                                <input type="file" class="default" value="{{$data[0]->pro_img}}" id="pro_img" />
+                                                </span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
                 					</div>
                 					
                 				</div>
@@ -105,5 +119,4 @@
     </div>
 </div>
 
-  <script type="text/javascript" src="lib/bootstrap-fileupload/bootstrap-fileupload.js"></script>
 @endsection

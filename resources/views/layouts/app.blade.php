@@ -13,10 +13,11 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-    <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="lib/bootstrap-datepicker/css/datepicker.css" />
-    <link rel="stylesheet" type="text/css" href="lib/bootstrap-daterangepicker/daterangepicker.css" />
+    <link href="{{asset('lib/font-awesome/css/font-awesome.css')}}" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{asset('lib/bootstrap-datepicker/css/datepicker.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('lib/bootstrap-daterangepicker/daterangepicker.css')}}" />
 
+  <link rel="stylesheet" type="text/css" href="{{asset('lib/bootstrap-fileupload/bootstrap-fileupload.css')}}" />
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{asset('lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -124,7 +125,7 @@
               </li>
               <li>
                 <a href="index.html#">
-                  <span class="photo"><img alt="avatar" src="img/ui-zac.jpg"></span>
+                  <span class="photo"><img alt="avatar" src="{{asset('img/ui-zac.jpg')}}"></span>
                   <span class="subject">
                   <span class="from">Zac Snider</span>
                   <span class="time">Just now</span>
@@ -136,7 +137,7 @@
               </li>
               <li>
                 <a href="index.html#">
-                  <span class="photo"><img alt="avatar" src="img/ui-divya.jpg"></span>
+                  <span class="photo"><img alt="avatar" src="{{asset('img/ui-divya.jpg')}}"></span>
                   <span class="subject">
                   <span class="from">Divya Manian</span>
                   <span class="time">40 mins.</span>
@@ -148,7 +149,7 @@
               </li>
               <li>
                 <a href="index.html#">
-                  <span class="photo"><img alt="avatar" src="img/ui-danro.jpg"></span>
+                  <span class="photo"><img alt="avatar" src="{{asset('img/ui-danro.jpg')}}"></span>
                   <span class="subject">
                   <span class="from">Dan Rogers</span>
                   <span class="time">2 hrs.</span>
@@ -160,7 +161,7 @@
               </li>
               <li>
                 <a href="index.html#">
-                  <span class="photo"><img alt="avatar" src="img/ui-sherman.jpg"></span>
+                  <span class="photo"><img alt="avatar" src="{{asset('img/ui-sherman.jpg')}}"></span>
                   <span class="subject">
                   <span class="from">Dj Sherman</span>
                   <span class="time">4 hrs.</span>
@@ -262,7 +263,7 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="profile.html"><img src="img/ui-sam.jpg" class="img-circle" width="80"></a></p>
+          <p class="centered"><a href="profile.html"><img src="{{asset('img/ui-sam.jpg')}}" class="img-circle" width="80"></a></p>
           <h5 class="centered">Sam Soffes</h5>
           <li class="mt">
             <a href="index.html">
@@ -407,5 +408,7 @@
   <script type="text/javascript" src="{{asset('lib/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
   <script type="text/javascript" src="{{asset('lib/bootstrap-inputmask/bootstrap-inputmask.min.js')}}"></script>
   <script src="{{asset('lib/form-component.js')}}"></script>
+
+  <script type="text/javascript" src="{{asset('lib/bootstrap-fileupload/bootstrap-fileupload.js')}}"></script>
 
 </html>
